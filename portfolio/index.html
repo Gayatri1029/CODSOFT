@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio.</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#internships">Internships</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <div class="intro">
+                    <p class="hello">Hello,</p>
+                    <h1>I'm Gayatri Maharana</h1>
+                    <p class="profession">Web Developer</p>
+                    <p>From Andhra Pradesh, India</p>
+                    <a href="#contact" class="btn">Hire Me</a>
+                </div>
+                <div class="profile-pic">
+                    <img src="C:\Users\gnage\Desktop\Gayatri internship projects\portfolio\profile.jpg.jpeg" alt="Gayatri">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Gayatri Maharana,a Web developer and I love all things tech.I'm always looking for new challenges and opportunities, and I'm excited to see what the future holds for me in the world of tech.Thanks for reading!.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">Python</div>
+                <div class="skill">Java</div>
+                <div class="skill">C++ language</div>
+                <div class="skill">Web Development (HTML, CSS, JS)</div>
+                <div class="skill">SQL</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Creating Tables and data using SQL.</h3>
+                    <p>Developed this project using SQL, Mysql.</p>
+                </div>
+                <div class="project-card">
+                    <h3>IT System of HSL.</h3>
+                    <p>Identifying the IT system of HSL, the inbound and outbound process and Customer Relationship Management(CRM).</p>
+                </div>
+                <div class="project-card">
+                    <h3>A Online Application for heart-disease prediction using templates.</h3>
+                    <p>Developed this project using Html, Css, Js, Php and MySql.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="internships" class="section">
+        <div class="container">
+            <h2>Internships</h2>
+            <div class="internships-grid">
+                <div class="internship-card">
+                    <h3>Ybi Foundation</h3>
+                    <p>❖	Using Python,AI and Data Skills<br>
+                       ❖	Machine Learning and Big data</p>
+                </div>
+                <div class="internship-card">
+                    <h3>Intrainz  Edutech- AICTE</h3>
+                    <p>❖	Using Html, Css, Bootstrap, Javascript Language<br>
+                       ❖	Creating, Designing, and maintaining websites and Web applications,<p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+            <p>Email: gayatrimaharana10@gmail.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gayatri Maharana</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            const observerOptions = {
+                root: null,
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
